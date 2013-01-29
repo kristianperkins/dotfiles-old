@@ -1,7 +1,10 @@
 dotfiles
 ========
 
-My [dot files](http://dotfiles.github.com/).
+krockode [dot files](http://dotfiles.github.com/).
 
-TODO: cobble together my current config currently spread accross
+TODO
+----
+
+Cobble together my current config currently spread across
 multiple machines.
