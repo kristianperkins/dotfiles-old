@@ -1,0 +1,4 @@
+[
+    // For some reason ctrl+space doesn't work by default on linux
+    { "keys": ["ctrl+space"], "command": "auto_complete" }
+]

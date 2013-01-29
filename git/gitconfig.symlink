@@ -1,0 +1,11 @@
+[alias]
+	st = status -s
+[user]
+	name = krockode
+	email = krockode@gmail.com
+
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
