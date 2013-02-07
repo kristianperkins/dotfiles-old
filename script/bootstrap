@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# hacked up version of [holmans bootstrap](https://github.com/holman/dotfiles/blob/master/script/bootstrap)
+#
+# bootstrap installs the things.
+
+DOTFILES_ROOT="`pwd`"
+
+info () {
+  printf " [ \033[00;34m..\033[0m ] $1"
+}
+
+user () {
+  printf "\r [ \033[0;33m?\033[0m ] $1 "
+}
+
+success () {
+  printf "\r\033[2K [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+
+link_files () {
+  ln -s $1 $2
+  success "linked $1 to $2"
+}
+
+
+info 'installing dotfiles'
+for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+do
+  dest="$HOME/.`basename \"${source%.*}\"`"
+  rm $dest
+  link_files $source $dest
+done
