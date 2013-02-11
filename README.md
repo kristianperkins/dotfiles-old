@@ -12,7 +12,7 @@ Minimum packages needed:
     sudo easy_install -U distribute
     sudo easy_install pip
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-    chsh -s /bin/zsh
+    chsh -s `which zsh`
 
 TODO
 ----
