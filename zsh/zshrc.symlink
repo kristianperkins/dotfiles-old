@@ -15,8 +15,11 @@ unsetopt correct_all
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 # Include args in history search.
-#[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      history-search-backward
-#[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    history-search-forward
-[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
-[[ -n "${key[Down]}"    ]] && bindkey  "${key[Down]}"    history-beginning-search-forward
+[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      history-search-backward
+[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    history-search-forward
+bindkey  "^[[1;2A"      history-beginning-search-backward
+bindkey  "^[[1;2B"    history-beginning-search-forward
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
